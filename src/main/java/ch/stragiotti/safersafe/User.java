@@ -7,12 +7,14 @@ import java.util.List;
 
 @Data
 @Entity
-public class Group {
+public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private int group_id;
+    private int user_id;
     private String name;
+    private String password;
+    private String token;
 
-    @OneToMany(mappedBy="group")
+    @OneToMany(mappedBy="user")
     private List<Password> passwords;
 }
