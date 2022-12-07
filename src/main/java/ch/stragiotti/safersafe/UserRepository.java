@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository; // CRUD - create, rea
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SafersafeRepository extends CrudRepository<Password, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 }
