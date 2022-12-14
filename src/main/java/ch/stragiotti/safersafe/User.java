@@ -10,6 +10,7 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "user_id")
     private int user_id;
     private String name;
     private String password;
