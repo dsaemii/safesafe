@@ -70,7 +70,7 @@ public class SafersafeRestController {
 
     @PostMapping("password")
     public void createPassword (@RequestHeader("Authorization") String token, @RequestBody Password password) {
-        String authToken = token.substring("Bearer ".length()); //validate bearer token
+        String authToken = token.substring("Bearer ".length()); // validate bearer token
         // Process the request and return response
         Optional<User> user = userRepository.findByToken(authToken);
         if(user.isPresent()) {
@@ -80,7 +80,7 @@ public class SafersafeRestController {
 
     @DeleteMapping("delete")
     public void deletePassword (@RequestHeader("Authorization") String token, @RequestBody Password password) {
-        String authToken = token.substring("Bearer ".length()); //validate bearer token
+        String authToken = token.substring("Bearer ".length()); // validate bearer token
         // Process the request and return response
         Optional<User> user = userRepository.findByToken(authToken);
         if(user.isPresent()) {
@@ -88,13 +88,13 @@ public class SafersafeRestController {
         }
     }
 
-    @PostUpdate("update")
+    @PostMapping("update")
     public void updatePassword (@RequestHeader("Authorization") String token, @RequestBody Password password) {
-        String authToken = token.substring("Bearer ".length()); //validate bearer token
+        String authToken = token.substring("Bearer ".length()); // validate bearer token
         // Process the request and return response
         Optional<User> user = userRepository.findByToken(authToken);
         if(user.isPresent()) {
-            passwordRepository.;
+            passwordRepository.save(password);
         }
     }
 
