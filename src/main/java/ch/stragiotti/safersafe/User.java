@@ -1,11 +1,14 @@
 package ch.stragiotti.safersafe;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
+@NoArgsConstructor
 @Entity
 public class User {
     @Id
@@ -18,4 +21,12 @@ public class User {
 
     @OneToMany(mappedBy="user")
     private List<Password> passwords;
+
+    public User(String name, String password, String token) {
+        this.name = name;
+        this.password = password;
+        this.token = token;
+    }
+
+
 }
