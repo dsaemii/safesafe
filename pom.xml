@@ -5,25 +5,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.0</version>
+        <version>3.0.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ch.stragiotti</groupId>
-    <artifactId>safersafe</artifactId>
+    <artifactId>safeSave</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>safersafe</name>
-    <description>safersafe</description>
+    <name>safeSave</name>
+    <description>safeSave</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>19</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -46,6 +42,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
